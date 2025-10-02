@@ -1,0 +1,90 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <form action="#" method="post">
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="full_name" required><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email_address" required><br>
+
+    <label for="position">Job Position:</label>
+    <select id="position" name="job_position" required>
+      <option value="" disabled selected>Select your position</option>
+      <option value="developer">Developer</option>
+      <option value="designer">Designer</option>
+      <option value="manager">Manager</option>
+    </select>
+
+    <fieldset class="radio-group">
+      <legend>Availability</legend>
+      
+      <input type="radio" id="full-time" name="availability" value="full-time" required>
+      <label for="full-time">Full-Time</label><br>
+
+      <input type="radio" id="part-time" name="availability" value="part-time">
+      <label for="part-time">Part-Time</label><br>
+
+      <input type="radio" id="freelance" name="availability" value="freelance">
+      <label for="freelance">Freelance</label>
+    </fieldset>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="user_message" rows="4" cols="50"></textarea>
+
+    <button type="submit">Submit Application</button>
+
+  </form>
+</div>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+input:focus
+,textarea:focus{
+  border-color:#4CAF50;
+  outline:none;
+}
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+input:valid,
+select:valid,
+textarea:valid{
+  border-color:green;
+}
+button:hover{
+  background-color:white;
+}
+.radio-group input[type="radio"]:checked{
+  border-color:#007bff;
+  background-color:#e9f5ff;
+  box-shadow:0 0 5px rgba(0, 123, 255, 0.5);
+}
+.radio-group input[type="radio"]:checked + label {
+  color: #1a73e8;}
+input:first-of-type {
+  /* Arka plan rengini değiştirin */
+  background-color: #f0f8ff; 
+  /* Kenarlık ekleyin */
+  border: 2px solid #007bff; 
+  /* Kenar boşluğu (padding) ekleyin */
+  padding: 5px;
+
+** end of styles.css **
+
