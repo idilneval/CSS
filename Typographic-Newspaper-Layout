@@ -1,0 +1,133 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Article</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+<div class="newspaper">
+  <h1 class="name">THE EDUCATION INSIGHT</h1>
+
+        <!-- Tarih (class: date) -->
+        <p class="date">Wednesday, October 4, 2025</p>
+
+        <!-- Manşet (class: headline) -->
+        <h2 class="headline">Madlen AI: The Integrated Solution Redefining Teacher Productivity and Student Growth</h2>
+
+        <!-- Alt Manşet (class: sub-headline) -->
+        <p class="sub-headline">A new EdTech platform moves beyond simple automation to offer deep pedagogical intelligence across the entire instructional cycle.</p>
+
+        <!-- Yazar (class: author) -->
+        <p class="author">By Anya Sharma, Ed.D.</p>
+
+        <!-- İlk Paragraf (class: text) -->
+        <p class="text">
+            For decades, the promise of technology in the classroom has been hampered by fragmented tools—one app for quizzes, another for planning, and a third for tracking data. The result is often more administrative burden, not less. Madlen, an AI-powered platform, has entered the market with a radical vision: a single, comprehensive suite designed to support teachers from the initial curriculum planning stages all the way through to personalized student feedback. By focusing on integration, Madlen positions itself not as a substitute for teacher intuition, but as a powerful engine for amplifying it.
+        </p>
+
+        <!-- İkinci Paragraf (class: text) -->
+        <p class="text">
+            The platform’s core strength lies in its ability to connect disparate data points. When a teacher uses Madlen to create an assessment, the system immediately links performance data back to the original lesson plan and curriculum standards. This allows the AI's misconception detector to identify precisely where a class is struggling, generating targeted remediation resources instantly. This dynamic feedback loop—absent in most competitor solutions—is the central pillar of Madlen’s unique value proposition, empowering educators to shift their focus from mechanical tasks to meaningful instructional strategies that demonstrably improve student outcomes.
+        </p>
+
+</div>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+html {
+    font-size: 24px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.newspaper {
+
+    font-size: 16px; 
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border: 2px solid #000;
+    background-color: #fff;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.name {
+
+    font-size: 2rem;
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 4px double #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.date {
+    text-align: right;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+.headline {
+
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left;
+    margin: 20px 0 10px 0;
+    line-height: 1.1;
+}
+
+.sub-headline {
+    font-size: 1.5em;
+    font-weight: 100; 
+    font-style: italic;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Yazar stili */
+.author {
+    font-weight: bold;
+    text-transform: uppercase; 
+    text-align: right;
+    margin-bottom: 20px;
+    border-top: 1px solid #000;
+    padding-top: 5px;
+}
+
+.text {
+
+    text-indent: 20px;
+    line-height: 2em;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.text::first-letter {
+    font-size: 2em;
+    font-weight: bold; 
+    float: left;
+    margin-right: 5px;
+    line-height: 1;
+}
+
+
+** end of styles.css **
+
