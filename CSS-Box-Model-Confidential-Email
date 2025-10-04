@@ -1,0 +1,50 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidential Email</title>
+  <link rel="stylesheets" href="styles.css">
+</head>
+
+<body>
+<main id="email">
+  <div id="confidential">CONFIDENTIAL</div>
+  <div id="top-secret">TOP SECRET</div>
+  <p>
+  This paragraph contains `span` elements that we will later style in CSS to visually <span class="blurred">hide or blur a section</span> of the text.
+</p>
+  <p> This paragraph contains `span` elements that we will later style in CSS to visually <span class="blurred">hide or blur a section</span> of the text.</p>
+  <p> This paragraph contains `span` elements that we will later style in CSS to visually <span class="blurred">hide or blur a section</span> of the text.</p>
+</main>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+#email{
+  box-sizing:border-box;
+  padding:50px;
+  margin-top:50px;
+  width:500px;
+  border:2px;
+}
+#confidential, #top-secret{
+  display:inline-block;
+  padding:10px;
+  margin:10px;
+  border:2px solid black;
+  transform:rotate(0.1deg);
+}
+.blurred{
+  filter:blur(3px);
+}
+
+** end of styles.css **
+
