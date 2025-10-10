@@ -1,0 +1,78 @@
+<body>
+
+    <nav id="navbar">
+        <header>CSS Fundamentals</header>
+        
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Selectors_and_Specificity">Selectors and Specificity</a>
+        <a class="nav-link" href="#The_Box_Model">The Box Model</a>
+        <a class="nav-link" href="#Flexbox_Layout">Flexbox Layout</a>
+        <a class="nav-link" href="#Media_Queries">Media Queries</a>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>CSS, which stands for **Cascading Style Sheets**, is a stylesheet language used to describe the presentation of a document written in a markup language like HTML. It handles the color, fonts, layout, and other aspects of a web page.</p>
+            <p>The "cascading" part of the name refers to how the browser determines which styles to apply. Styles from different sources (browser defaults, user styles, and author styles) are combined, and precedence is given based on several factors, including specificity and order of appearance.</p>
+            <p>Here's how to link a stylesheet:</p>
+            <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+            <p>Always ensure your styles are properly linked in the &lt;head&gt; of your HTML document.</p>
+        </section>
+
+        <section class="main-section" id="Selectors_and_Specificity">
+            <header>Selectors and Specificity</header>
+            <p>A CSS **selector** points to the HTML element(s) you want to style. There are many types, including tag, class, and ID selectors. The choice of selector affects a rule's **specificity**.</p>
+            <p>Specificity is a set of rules that determines which style declaration is applied to an element when multiple rules target it. ID selectors have the highest specificity, followed by class selectors, and finally tag selectors.</p>
+            <p>Types of selectors:</p>
+            <ul>
+                <li>Tag Selector: <code>p { color: black; }</code></li>
+                <li>Class Selector: <code>.button { background: blue; }</code></li>
+                <li>ID Selector: <code>#logo { border: none; }</code></li>
+            </ul>
+            <p>The importance of specificity often comes up when debugging CSS that doesn't seem to be working. It's often because a more specific rule is overriding a less specific one.</p>
+        </section>
+
+        <section class="main-section" id="The_Box_Model">
+            <header>The Box Model</header>
+            <p>The CSS **Box Model** is essentially a box that wraps around every HTML element. It consists of **content**, **padding**, **border**, and **margin**.</p>
+            <p>Understanding the box model is crucial for layout. By default, <code>width</code> and <code>height</code> only apply to the content area. To include padding and border in the specified width/height, you can use the <code>box-sizing</code> property.</p>
+            <p>The standard box model (default):</p>
+            <code>box-sizing: content-box;</code>
+            <p>The modern box model (preferred):</p>
+            <code>box-sizing: border-box;</code>
+            <p>When using <code>border-box</code>, a declared width of <code>200px</code> will result in the total width of the element being exactly <code>200px</code>, accounting for padding and border inside that value.</p>
+        </section>
+
+        <section class="main-section" id="Flexbox_Layout">
+            <header>Flexbox Layout</header>
+            <p>Flexbox (the Flexible Box Module) is a one-dimensional layout method for arranging items in a container. It excels at distributing space and aligning content along a single row or column.</p>
+            <p>Key properties for the container:</p>
+            <ul>
+                <li><code>display: flex;</code> (initializes the flex context)</li>
+                <li><code>justify-content</code> (aligns items along the main axis)</li>
+                <li><code>align-items</code> (aligns items along the cross axis)</li>
+            </ul>
+            <p>Key properties for the items:</p>
+            <ul>
+                <li><code>flex-grow</code></li>
+                <li><code>flex-shrink</code></li>
+            </ul>
+            <p>Flexbox is often used to center elements or create dynamic navigation bars.</p>
+            <code>display: flex; justify-content: center; align-items: center;</code>
+            <p>This code snippet is a common way to center an item both horizontally and vertically inside its parent container.</p>
+        </section>
+
+        <section class="main-section" id="Media_Queries">
+            <header>Media Queries</header>
+            <p>A **media query** consists of a media type and zero or more expressions that limit the style sheet's scope by checking for specific features, such as viewport width or device orientation. They are essential for **responsive web design**.</p>
+            <p>The syntax for a basic media query:</p>
+            <code>@media (max-width: 600px) { /* CSS rules go here */ }</code>
+            <p>This rule set only applies if the viewport is 600 pixels wide or less.</p>
+            <p>Media queries allow developers to create different layouts for desktop, tablet, and mobile screens from the same HTML source. This is a fundamental concept in modern web design.</p>
+            <p>It's best practice to use a "mobile-first" approach, applying basic styles, and then using <code>min-width</code> queries for larger screens.</p>
+        </section>
+
+    </main>
+</body>
