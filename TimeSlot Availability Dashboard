@@ -1,0 +1,194 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Availability Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="legend" id="legend">
+        <span>Availability</span>
+        <div id="legend-gradient"></div>
+    </div>
+
+    <table>
+       
+  <tr>
+    <th>Time</th>  <!-- sadece bu sütun adı -->
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+  </tr>
+</thead>
+<tbody>
+  <tr class="sharp">
+    <th class="time">9:00 AM</th>
+    <td class="available-5">5</td>
+    <td class="available-3">3</td>
+    <td class="available-1">1</td>
+    <td class="available-2">2</td>
+  </tr>
+  <tr class="half">
+    <th class="time">10:00 AM</th>
+    <td class="available-4">4</td>
+    <td class="available-2">2</td>
+    <td class="available-0">0</td>
+    <td class="available-5">5</td>
+  </tr>
+  <tr class="sharp">
+    <th class="time">11:00 AM</th>
+    <td class="available-3">3</td>
+    <td class="available-5">5</td>
+    <td class="available-2">2</td>
+    <td class="available-1">1</td>
+  </tr>
+  <tr class="half">
+    <th class="time">12:00 PM</th>
+    <td class="available-1">1</td>
+    <td class="available-4">4</td>
+    <td class="available-3">3</td>
+    <td class="available-2">2</td>
+  </tr>
+  <tr class="sharp">
+    <th class="time">1:00 PM</th>
+    <td class="available-0">0</td>
+    <td class="available-1">1</td>
+    <td class="available-5">5</td>
+    <td class="available-3">3</td>
+  </tr>
+</tbody>
+    </table>
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+:root {
+    /* 1. Availability Colors (--color0 to --color5) */
+    --color0: #f44336; /* 0 Available (None) */
+    --color1: #ff9800; /* 1 Available (Low) */
+    --color2: #ffeb3b; /* 2 Available (Moderate) */
+    --color3: #cddc39; /* 3 Available (Good) */
+    --color4: #4caf50; /* 4 Available (High) */
+    --color5: #009688; /* 5 Available (Full) */
+
+    /* 2. Border Styles (--solid-border and --dashed-border) */
+    --solid-border: 4px solid #333;
+    --dashed-border: 4px dashed #666;
+
+    /* General Style Variables */
+    --header-bg: #37474f;
+    --text-color: #f5f5f5;
+    --time-header-bg: #455a64;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #eceff1;
+}
+
+/* --- Table Styling --- */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+th {
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Day Headers */
+table th:not(.time) {
+    background-color: var(--header-bg);
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Time Headers (First Column - class of time) */
+.time {
+    background-color: var(--time-header-bg);
+    text-align: left;
+    padding-left: 15px;
+    min-width: 100px;
+}
+
+/* Data Cells */
+td {
+    padding: 15px 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Apply Color Variables to Data Cells (.available-#) */
+.available-0 { background-color: var(--color0); }
+.available-1 { background-color: var(--color1); }
+.available-2 { background-color: var(--color2); }
+.available-3 { background-color: var(--color3); }
+.available-4 { background-color: var(--color4); }
+.available-5 { background-color: var(--color5); }
+
+/* Apply Border Variables using row classes (sharp and half) */
+
+/* Rows with class 'sharp' get a solid bottom border */
+.sharp td {
+    border-bottom: var(--solid-border);
+}
+
+/* Rows with class 'half' get a dashed bottom border */
+.half td {
+    border-bottom: var(--dashed-border);
+}
+
+/* Remove border from the last row for cleaner look */
+table tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* --- Legend Styling (#legend and #legend-gradient) --- */
+#legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #455a64;
+  color: white;
+  border-radius: 6px;
+}
+
+#legend span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#legend-gradient {
+  width: 60%;
+  height: 20px;
+  border-radius: 4px;
+  background-image: linear-gradient(90deg, var(--color0) 16%, var(--color1) 16% 33%, var(--color2) 33% 49%, var(--color3) 49% 66%, var(--color4) 66% 83%, var(--color5) 83%);
+}
+
+** end of styles.css **
+
